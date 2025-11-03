@@ -13,6 +13,7 @@ import {
 } from "framer-motion";
 import Services from "./components/services/services";
 import Review from "./components/review/review";
+import Quote from "./components/quote/quote";
 
 function Splash({ onFinish, splashControls, mv }) {
   const [num, setNum] = useState(0);
@@ -151,6 +152,7 @@ export default function Home() {
         </div>
       </motion.div>
       <Services />
+      <Quote />
     </div>
   );
 }

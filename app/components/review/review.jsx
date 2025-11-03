@@ -14,7 +14,7 @@ function Review() {
           <div className=" flex flex-col gap-5">
             <div className=" relative">
               <div className=" py-3 border-b">
-                <h2 className=" tracking-wider text-lg leading-none">
+                <h2 className=" tracking-wider text-lg leading-none bg-gradient-to-r from-white via-white to-[#c3c3c3] bg-clip-text text-transparent">
                   Unmatched Fulfilment
                 </h2>
               </div>
@@ -26,7 +26,7 @@ function Review() {
             </div>
             <div className=" relative">
               <div className=" py-3 border-b">
-                <h2 className=" tracking-wider text-lg leading-none">
+                <h2 className=" tracking-wider text-lg leading-none bg-gradient-to-r from-white via-white to-[#c3c3c3] bg-clip-text text-transparent">
                   5+ Years Experience
                 </h2>
               </div>
@@ -38,7 +38,7 @@ function Review() {
             </div>
             <div className=" relative">
               <div className=" py-3 border-b">
-                <h2 className=" tracking-wider text-lg leading-none">
+                <h2 className=" tracking-wider text-lg leading-none bg-gradient-to-r from-white via-white to-[#c3c3c3] bg-clip-text text-transparent">
                   Over 4000+ Vouches
                 </h2>
               </div>

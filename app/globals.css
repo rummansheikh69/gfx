@@ -8,3 +8,12 @@
   --font-tommy-extrabold: "MADETOMMY_ExtraBold", sans-serif;
   --font-tommy-medium: "MADETOMMY_Medium", sans-serif;
 }
+
+.radial {
+  background: #414141;
+  background: radial-gradient(
+    circle,
+    rgba(65, 65, 65, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
