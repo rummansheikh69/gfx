@@ -14,6 +14,7 @@ import {
 import Services from "./components/services/services";
 import Review from "./components/review/review";
 import Quote from "./components/quote/quote";
+import Footer from "./components/footer/footer";
 
 function Splash({ onFinish, splashControls, mv }) {
   const [num, setNum] = useState(0);
@@ -153,6 +154,7 @@ export default function Home() {
       </motion.div>
       <Services />
       <Quote />
+      <Footer />
     </div>
   );
 }

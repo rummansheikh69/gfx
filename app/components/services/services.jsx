@@ -3,7 +3,7 @@ import React from "react";
 
 function Services() {
   return (
-    <div id="services" className=" w-full py-24 ">
+    <div id="services" className=" w-full pt-24 ">
       <div className=" flex items-center justify-center w-full">
         <div className=" flex items-center justify-center w-full gap-20">
           <div className=" h-[2px] w-1/5  bg-gradient-to-l from-[#acacac] via-[#6e6e6e] to-[#121212]"></div>
@@ -103,6 +103,10 @@ function Services() {
         </div>
       </div>
       {/* cards end */}
+
+      <h4 className=" text-3xl font-extrabold tracking-wide leading-none  bg-gradient-to-r from-white  to-[#c3c3c3] bg-clip-text text-transparent text-center mt-20">
+        & So Much More..
+      </h4>
     </div>
   );
 }

@@ -47,7 +47,7 @@ function Hero({ startAnim = false }) {
   }, []);
 
   return (
-    <div className="w-full h-screen">
+    <div className="w-full h-screen pt-16">
       <motion.div
         className="w-full h-full flex flex-col items-center justify-center"
         variants={container}
@@ -58,17 +58,17 @@ function Hero({ startAnim = false }) {
           variants={smallUp}
           className="py-2.5 px-[18px] rounded-full bg-white/5 flex items-center gap-4"
         >
-          <div className="p-[6px] bg-[#2a3526] rounded-full">
-            <div className="p-[5px] bg-[#49ff0a] rounded-full"></div>
+          <div className="p-[4px] 2xl:p-[6px] bg-[#2a3526] rounded-full">
+            <div className=" p-[4px] 2xl:p-[5px] bg-[#49ff0a] rounded-full"></div>
           </div>
-          <h5 className="text-lg font-tommy-light font-semibold tracking-wider">
+          <h5 className=" text-sm 2xl:text-lg font-tommy-light font-semibold tracking-wider">
             Available For Hire
           </h5>
         </motion.div>
 
         <motion.div
           variants={bigUp}
-          className="flex items-center gap-4 text-[200px] 2xl:text-[300px] font-tommy-bold leading-none mt-5"
+          className="flex items-center gap-4 text-[180px] 2xl:text-[300px] font-tommy-bold leading-none mt-5"
         >
           <h1 className="text-[#ababab]">UX</h1>
           <h1>GFX</h1>
@@ -76,7 +76,7 @@ function Hero({ startAnim = false }) {
 
         <motion.div
           variants={smallUp}
-          className="flex flex-col items-center gap-4 text-4xl 2xl:text-5xl font-tommy-light font-semibold leading-none mt-10"
+          className="flex flex-col items-center gap-4 text-4xl 2xl:text-5xl font-tommy-light font-semibold leading-none mt-6 2xl:mt-10"
         >
           <h2 className="text-[#e4e4e4]">
             Enhancing the visual representation of your businesses
@@ -96,7 +96,7 @@ function Hero({ startAnim = false }) {
 
         <motion.div
           variants={smallUp}
-          className="flex items-center gap-12 mt-20"
+          className="flex items-center gap-12 mt-14 2xl:mt-20"
         >
           <div className="w-56 h-14 border-2 rounded-xl border-white flex items-center justify-center group cursor-pointer">
             <div className="flex items-center gap-3 ">

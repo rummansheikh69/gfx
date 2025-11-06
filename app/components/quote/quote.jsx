@@ -4,7 +4,7 @@ import { MdOutlineDone } from "react-icons/md";
 
 function Quote() {
   return (
-    <div id="quote" className=" w-full py-24 ">
+    <div id="quote" className=" w-full pt-24 ">
       <div className=" px-5 md:px-10 lg:px-14 xl:px-20 2xl:px-32 w-full">
         <div className="w-full border-2 border-[#303030] rounded-2xl bg-[#121212] relative overflow-hidden">
           <div className=" absolute -left-[420px] 2xl:-left-72 top-56 2xl:top-64 h-[2500px] w-[2500px] rounded-full bg-[#414141] blur-[150px]"></div>

@@ -37,7 +37,11 @@ function Navbar() {
             <a href="#" className="hover:text-[#e9e9e9] duration-400">
               Gallery
             </a>
-            <a href="#" className="hover:text-[#e9e9e9] duration-400">
+            <a
+              href="#contact"
+              onClick={handleNavClick}
+              className="hover:text-[#e9e9e9] duration-400"
+            >
               Contact
             </a>
           </div>

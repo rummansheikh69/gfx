@@ -8,7 +8,7 @@ import { HiArrowRight, HiArrowLeft } from "react-icons/hi";
 
 function Review() {
   return (
-    <div className=" pt-5 pb-24 ">
+    <div className=" pb-12 pt-24 ">
       <div className=" w-full h-full flex justify-center items-center">
         <div className=" flex flex-col lg:flex-row gap-52 items-center">
           <div className=" flex flex-col gap-5">
