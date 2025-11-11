@@ -35,13 +35,13 @@ function Services() {
                 01
               </div>
               <div className=" mt-10">
-                <h2 className=" text-xl">Logo Design</h2>
-                <h2 className=" text-sm  text-[#a4a4a4]">
+                <h2 className=" text-xl 2xl:text-2xl">Logo Design</h2>
+                <h2 className=" text-sm 2xl:text-lg  text-[#a4a4a4]">
                   The face of your brand.
                 </h2>
               </div>
 
-              <h3 className="text-sm mb-3 tracking-wider text-[#a4a4a4] underline">
+              <h3 className="text-sm 2xl:text-lg mb-3 tracking-wider text-[#a4a4a4] underline">
                 Starting at $20
               </h3>
             </div>
@@ -65,13 +65,13 @@ function Services() {
                 02
               </div>
               <div className=" mt-10">
-                <h2 className=" text-xl">Banner Design</h2>
-                <h2 className=" text-sm  text-[#a4a4a4]">
+                <h2 className=" text-xl 2xl:text-2xl">Banner Design</h2>
+                <h2 className=" text-sm 2xl:text-lg text-[#a4a4a4]">
                   Your brand, in full view.
                 </h2>
               </div>
 
-              <h3 className="text-sm mb-3 tracking-wider text-[#a4a4a4] underline">
+              <h3 className="text-sm 2xl:text-lg mb-3 tracking-wider text-[#a4a4a4] underline">
                 Starting at $15
               </h3>
             </div>
@@ -89,13 +89,13 @@ function Services() {
                 03
               </div>
               <div className=" mt-10">
-                <h2 className=" text-xl">Website Design</h2>
-                <h2 className=" text-sm  text-[#a4a4a4]">
+                <h2 className=" text-xl 2xl:text-2xl">Website Design</h2>
+                <h2 className=" text-sm 2xl:text-lg text-[#a4a4a4]">
                   The hub that connects it all.
                 </h2>
               </div>
 
-              <h3 className="text-sm mb-3 tracking-wider text-[#a4a4a4] underline">
+              <h3 className="text-sm 2xl:text-lg mb-3 tracking-wider text-[#a4a4a4] underline">
                 Starting at $100
               </h3>
             </div>

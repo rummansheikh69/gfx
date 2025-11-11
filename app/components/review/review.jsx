@@ -14,38 +14,38 @@ function Review() {
           <div className=" flex flex-col gap-5">
             <div className=" relative">
               <div className=" py-3 border-b">
-                <h2 className=" tracking-wider text-lg leading-none bg-gradient-to-r from-white via-white to-[#c3c3c3] bg-clip-text text-transparent">
+                <h2 className=" tracking-wider text-lg 2xl:text-2xl leading-none bg-gradient-to-r from-white via-white to-[#c3c3c3] bg-clip-text text-transparent">
                   Unmatched Fulfilment
                 </h2>
               </div>
               <div className=" absolute md:-right-[11px] md:-bottom-[5px] lg:-right-[11px] lg:-bottom-[4px] h-8 rotate-45 w-[1px] bg-white" />
-              <div className=" absolute md:-right-[61.5px] md:top-[25.5px] lg:-right-[78px] lg:top-[19.5px] h-[1px]  w-14 bg-white" />
+              <div className=" absolute md:-right-[61.5px] md:top-[25.5px] lg:-right-[78px] lg:top-[19.5px] 2xl:top-[25.5px]  h-[1px]  w-14 bg-white" />
               <div className=" absolute md:-right-[60px] md:top-[25.5px] lg:-right-[60px] lg:-top-3 ">
-                <MdAlarm className=" size-5" />
+                <MdAlarm className=" size-5 2xl:size-6" />
               </div>
             </div>
             <div className=" relative">
               <div className=" py-3 border-b">
-                <h2 className=" tracking-wider text-lg leading-none bg-gradient-to-r from-white via-white to-[#c3c3c3] bg-clip-text text-transparent">
+                <h2 className=" tracking-wider text-lg 2xl:text-2xl leading-none bg-gradient-to-r from-white via-white to-[#c3c3c3] bg-clip-text text-transparent">
                   5+ Years Experience
                 </h2>
               </div>
               <div className=" absolute md:-right-[11px] md:-bottom-[5px] lg:-right-[11px] lg:-bottom-[4px] h-8 rotate-45 w-[1px] bg-white" />
-              <div className=" absolute md:-right-[61.5px] md:top-[25.5px] lg:-right-[78px] lg:top-[19.5px] h-[1px]  w-14 bg-white" />
+              <div className=" absolute md:-right-[61.5px] md:top-[25.5px] lg:-right-[78px] lg:top-[19.5px] 2xl:top-[25.5px] h-[1px]  w-14 bg-white" />
               <div className=" absolute md:-right-[60px] md:top-[25.5px] lg:-right-[60px] lg:-top-3 ">
-                <AiOutlineTrophy className=" size-5" />
+                <AiOutlineTrophy className=" size-5 2xl:size-6" />
               </div>
             </div>
             <div className=" relative">
               <div className=" py-3 border-b">
-                <h2 className=" tracking-wider text-lg leading-none bg-gradient-to-r from-white via-white to-[#c3c3c3] bg-clip-text text-transparent">
+                <h2 className=" tracking-wider text-lg 2xl:text-2xl leading-none bg-gradient-to-r from-white via-white to-[#c3c3c3] bg-clip-text text-transparent">
                   Over 4000+ Vouches
                 </h2>
               </div>
               <div className=" absolute md:-right-[11px] md:-bottom-[5px] lg:-right-[11px] lg:-bottom-[4px] h-8 rotate-45 w-[1px] bg-white" />
-              <div className=" absolute md:-right-[61.5px] md:top-[25.5px] lg:-right-[78px] lg:top-[19.5px] h-[1px]  w-14 bg-white" />
+              <div className=" absolute md:-right-[61.5px] md:top-[25.5px] lg:-right-[78px] lg:top-[19.5px] 2xl:top-[25.5px] h-[1px]  w-14 bg-white" />
               <div className=" absolute md:-right-[60px] md:top-[25.5px] lg:-right-[60px] lg:-top-3 ">
-                <GoVerified className=" size-5" />
+                <GoVerified className=" size-5 2xl:size-6" />
               </div>
             </div>
           </div>
