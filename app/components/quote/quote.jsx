@@ -1,13 +1,41 @@
+"use client";
+import { useEffect, useRef } from "react";
+import { motion, useInView, useAnimation } from "framer-motion";
 import Image from "next/image";
-import React from "react";
 import { MdOutlineDone } from "react-icons/md";
 
 function Quote() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
+
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    } else {
+      mainControls.start("hidden"); // 👈 hide again when scrolled out
+    }
+  }, [isInView]);
+
   return (
-    <div id="quote" className=" w-full pt-24 ">
+    <div className=" w-full pt-24 ">
       <div className=" px-5 md:px-10 lg:px-14 xl:px-20 2xl:px-32 w-full">
         <div className="w-full border-2 border-[#303030] rounded-2xl bg-[#121212] relative overflow-hidden">
-          <div className=" absolute -left-[420px] 2xl:-left-72 top-56 2xl:top-64 h-[2500px] w-[2500px] rounded-full bg-[#414141] blur-[150px]"></div>
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, x: 100, y: 100 },
+              visible: { opacity: 1, x: 0, y: 0 },
+            }}
+            initial="hidden"
+            animate={mainControls}
+            transition={{
+              duration: 1,
+              delay: 0.1,
+              ease: [0.25, 0.1, 0.25, 1], // smoother ease
+            }}
+            className="absolute -left-[420px] 2xl:-left-72 top-56 2xl:top-64 h-[2500px] w-[2500px] rounded-full bg-[#414141] blur-[150px]"
+          ></motion.div>
           <div className="  z-10 py-10 px-7 2xl:px-10 ">
             <div className=" grid grid-cols-1 lg:grid-cols-2">
               <div className="">
@@ -67,7 +95,9 @@ function Quote() {
 
                 <div className=" absolute bottom-0 inset-x-0 mx-auto w-56 h-14 border-2 rounded-xl border-white bg-gradient-to-l from-[#999999] to-white flex items-center justify-center group cursor-pointer">
                   <div className="flex items-center gap-3 ">
-                    <h3 className="text-[25px] text-black">Contact</h3>
+                    <h3 ref={ref} className="text-[25px] text-black">
+                      Contact
+                    </h3>
                     <Image
                       src="/arrow-right-black.svg"
                       alt="arrow"

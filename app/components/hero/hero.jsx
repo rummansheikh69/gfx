@@ -35,6 +35,20 @@ const bigUp = {
 };
 
 function Hero({ startAnim = false }) {
+  function handleNavClick(e) {
+    const href = e.currentTarget.getAttribute("href");
+    if (!href || !href.startsWith("#")) return;
+    e.preventDefault();
+    const id = href.slice(1);
+    const el = document.getElementById(id);
+    if (!el) return;
+    // account for fixed navbar height
+    const navbarEl = document.querySelector(".site-navbar");
+    const navbarHeight = navbarEl ? navbarEl.offsetHeight : 0;
+    const top = el.getBoundingClientRect().top + window.scrollY - navbarHeight;
+    window.scrollTo({ top, behavior: "smooth" });
+  }
+
   // track global scroll to dim the second line when the page is scrolled down
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -110,18 +124,20 @@ function Hero({ startAnim = false }) {
               />
             </div>
           </div>
-          <div className="w-56 h-14 border-2 rounded-xl border-white bg-gradient-to-l from-[#999999] to-white flex items-center justify-center group cursor-pointer">
-            <div className="flex items-center gap-3 ">
-              <h3 className="text-[25px] text-black">Get Started</h3>
-              <Image
-                src="/arrow-right-black.svg"
-                alt="arrow"
-                width={22}
-                height={22}
-                className="group-hover:translate-x-2 duration-300"
-              />
+          <a href="#contact" onClick={handleNavClick}>
+            <div className="w-56 h-14 border-2 rounded-xl border-white bg-gradient-to-l from-[#999999] to-white flex items-center justify-center group cursor-pointer">
+              <div className="flex items-center gap-3 ">
+                <h3 className="text-[25px] text-black">Get Started</h3>
+                <Image
+                  src="/arrow-right-black.svg"
+                  alt="arrow"
+                  width={22}
+                  height={22}
+                  className="group-hover:translate-x-2 duration-300"
+                />
+              </div>
             </div>
-          </div>
+          </a>
         </motion.div>
       </motion.div>
     </div>
