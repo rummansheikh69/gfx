@@ -1,5 +1,6 @@
 import "./globals.css";
 import localFont from "next/font/local";
+import { ViewTransitions } from "next-view-transitions";
 
 const tommyRegular = localFont({
   variable: "--font-tommy-regular",
@@ -73,12 +74,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${tommyBlack.variable} ${tommyRegular.variable} ${tommyLight.variable} ${tommyBold.variable} ${tommyExtraBold.variable} ${tommyMedium.variable} antialiased bg-[#121212]`}
-      >
-        {children}
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en">
+        <body
+          className={`${tommyBlack.variable} ${tommyRegular.variable} ${tommyLight.variable} ${tommyBold.variable} ${tommyExtraBold.variable} ${tommyMedium.variable} antialiased bg-[#121212]`}
+        >
+          {children}
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }
