@@ -25,7 +25,7 @@ function Navbar() {
   const pathname = usePathname();
 
   const pageAnimation = () => {
-    document.documentElement.animate(
+    const animOld = document.documentElement.animate(
       [
         {
           scale: 1,
@@ -34,21 +34,21 @@ function Navbar() {
           opacity: 1,
         },
         {
-          scale: 1.2,
+          scale: 0.8,
           transform: "translateY(-10%)",
-          rotate: "-5deg",
+          rotate: "0deg",
           opacity: 0,
         },
       ],
       {
         duration: 1200,
-        easing: "cubic-bezier(0.9, 0, 0.1, 1)",
+        easing: "cubic-bezier(0.8, 0, 0.1, 1)",
         fill: "forwards",
         pseudoElement: "::view-transition-old(root)",
       }
     );
 
-    document.documentElement.animate(
+    const animNew = document.documentElement.animate(
       [
         {
           transform: "translateY(100%)",
@@ -64,6 +64,20 @@ function Navbar() {
         pseudoElement: "::view-transition-new(root)",
       }
     );
+
+    // Ensure transforms don't persist (which breaks fixed positioning / scrolling).
+    // When the animations finish, cancel them to remove the final applied transform,
+    // and clear any inline transform left on the root element.
+    Promise.all([animOld.finished, animNew.finished]).finally(() => {
+      try {
+        animOld.cancel();
+        animNew.cancel();
+      } catch (e) {
+        /* ignore */
+      }
+      // make absolutely sure no lingering root transform remains
+      document.documentElement.style.transform = "";
+    });
   };
 
   const handleNavigation = (e, path) => {
@@ -84,9 +98,9 @@ function Navbar() {
           <Link
             href="/"
             onClick={(e) => handleNavigation(e, "/")}
-            className=" w-32 flex items-center justify-center bg-transparent backdrop-blur-[4px]  py-3 rounded-md"
+            className=" w-32 flex items-center justify-center  bg-transparent backdrop-blur-[4px]  py-2.5 rounded-md"
           >
-            <h1 className=" text-3xl font-tommy-regular tracking-wide leading-none -mt-3  bg-gradient-to-r from-white via-white to-[#aeaeae] bg-clip-text text-transparent">
+            <h1 className=" text-2xl font-tommy-regular tracking-wide leading-none  bg-gradient-to-r from-white via-white to-[#aeaeae] bg-clip-text text-transparent">
               UXGFX®
             </h1>
           </Link>

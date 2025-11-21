@@ -1,6 +1,7 @@
 "use client";
 import Footer from "../components/footer/footer";
 import Navbar from "../components/layout/navbar";
+import FullscreenModal from "../components/modal/modal";
 import Title from "../components/title";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { TbEye } from "react-icons/tb";
@@ -24,7 +25,11 @@ function page() {
             #UX<span className="text-[#ababab]">GFX</span>
           </Title>
         </div>
-        <div className=" px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-28 w-full">
+        <FullscreenModal id="logo" />
+        <div
+          onClick={() => window["logo"].openModal()}
+          className=" px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-28 w-full"
+        >
           <div className=" w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-5">
             <div className=" relative h-64 bg-[#0a0a0a] w-full rounded-lg overflow-hidden border border-[#1a1a1a] group cursor-pointer">
               <h1 className="text-[400px] font-tommy-bold leading-none -mt-32 -ml-36 tracking-tighter opacity-[1%]">
