@@ -8,7 +8,7 @@ function Services() {
         <div className=" flex items-center justify-center w-full gap-20">
           <div className=" h-[2px] w-1/5  bg-gradient-to-l from-[#acacac] via-[#6e6e6e] to-[#121212]"></div>
           <div className="">
-            <h1 className=" text-7xl font-tommy-regular tracking-wide leading-none -mt-3  bg-gradient-to-r from-white  to-[#c3c3c3] bg-clip-text text-transparent">
+            <h1 className=" text-5xl 2xl:text-7xl font-tommy-regular tracking-wide leading-none -mt-3  bg-gradient-to-r from-white  to-[#c3c3c3] bg-clip-text text-transparent">
               Our Services
             </h1>
           </div>
@@ -31,7 +31,7 @@ function Services() {
             <div className=" absolute top-40 left-20 w-[500px] h-[500px] rounded-full bg-[#3f3f3f] blur-[150px]"></div>
 
             <div className=" p-5 z-10 flex flex-col justify-between h-full">
-              <div className=" w-12 h-12 border-[1.5px] bg-[#202020] border-[#5f5f5e] rounded-full flex items-center justify-center text-2xl font-tommy-light font-light">
+              <div className=" w-12 h-12 border-[1.5px] bg-[#202020] border-[#5f5f5e] rounded-full flex items-center justify-center text-xl 2xl:text-2xl font-tommy-light font-light">
                 01
               </div>
               <div className=" mt-10">
@@ -61,7 +61,7 @@ function Services() {
             <div className=" absolute top-44 left-20 w-[500px] h-[500px] rounded-full bg-[#3f3f3f] blur-[150px]"></div>
 
             <div className=" p-5 z-10 flex flex-col justify-between h-full">
-              <div className=" w-12 h-12 border-[1.5px] bg-[#202020] border-[#5f5f5e] rounded-full flex items-center justify-center text-2xl font-tommy-light font-light">
+              <div className=" w-12 h-12 border-[1.5px] bg-[#202020] border-[#5f5f5e] rounded-full flex items-center justify-center text-xl 2xl:text-2xl font-tommy-light font-light">
                 02
               </div>
               <div className=" mt-10">
@@ -85,7 +85,7 @@ function Services() {
             <div className=" absolute top-44 left-20 w-[500px] h-[500px] rounded-full bg-[#3f3f3f] blur-[150px]"></div>
 
             <div className=" p-5 z-10 flex flex-col justify-between h-full">
-              <div className=" w-12 h-12 border-[1.5px] bg-[#202020] border-[#5f5f5e] rounded-full flex items-center justify-center text-2xl font-tommy-light font-light">
+              <div className=" w-12 h-12 border-[1.5px] bg-[#202020] border-[#5f5f5e] rounded-full flex items-center justify-center text-xl 2xl:text-2xl font-tommy-light font-light">
                 03
               </div>
               <div className=" mt-10">

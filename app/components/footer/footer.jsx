@@ -14,18 +14,18 @@ function Footer() {
               href="https://t.me/disproportions"
               target="_blank"
             >
-              <h2 className=" group-hover:underline text-[#838383] text-xl 2xl:text-2xl">
+              <h2 className=" group-hover:underline text-[#838383] text-lg 2xl:text-2xl">
                 Telegram
               </h2>
-              <h2 className=" group-hover:underline text-xl mt-1 2xl:text-2xl tracking-wider">
+              <h2 className=" group-hover:underline  mt-1 text-lg 2xl:text-2xl tracking-wider">
                 disproportions
               </h2>
             </a>
             <a className=" group" href="https://uxgfx.com">
-              <h2 className="group-hover:underline text-[#838383] text-xl 2xl:text-2xl">
+              <h2 className="group-hover:underline text-[#838383] text-lg 2xl:text-2xl">
                 Website
               </h2>
-              <h2 className="group-hover:underline  text-xl mt-1 2xl:text-2xl tracking-wider">
+              <h2 className="group-hover:underline  text-lg mt-1 2xl:text-2xl tracking-wider">
                 uxgfx.com
               </h2>
             </a>
@@ -34,10 +34,10 @@ function Footer() {
               href="https://discord.gg/uxgfx"
               target="_blank"
             >
-              <h2 className="group-hover:underline text-[#838383] text-xl 2xl:text-2xl">
+              <h2 className="group-hover:underline text-[#838383] text-lg 2xl:text-2xl">
                 Discord
               </h2>
-              <h2 className="group-hover:underline  text-xl 2xl:text-2xl mt-1 tracking-wider">
+              <h2 className="group-hover:underline  text-lg 2xl:text-2xl mt-1 tracking-wider">
                 discord.gg/uxgfx
               </h2>
             </a>

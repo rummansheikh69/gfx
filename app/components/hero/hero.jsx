@@ -75,14 +75,14 @@ function Hero({ startAnim = false }) {
           <div className="p-[4px] 2xl:p-[6px] bg-[#2a3526] rounded-full">
             <div className=" p-[4px] 2xl:p-[5px] bg-[#49ff0a] rounded-full"></div>
           </div>
-          <h5 className=" text-sm 2xl:text-lg font-tommy-light font-semibold tracking-wider">
+          <h5 className=" text-[13px] 2xl:text-lg font-tommy-light font-semibold tracking-wider">
             Available For Hire
           </h5>
         </motion.div>
 
         <motion.div
           variants={bigUp}
-          className="flex items-center gap-4 text-[180px] 2xl:text-[300px] font-tommy-bold leading-none mt-5"
+          className="flex items-center gap-4 text-[150px] 2xl:text-[200px] font-tommy-bold leading-none mt-5"
         >
           <h1 className="text-[#ababab]">UX</h1>
           <h1>GFX</h1>
@@ -90,7 +90,7 @@ function Hero({ startAnim = false }) {
 
         <motion.div
           variants={smallUp}
-          className="flex flex-col items-center gap-4 text-4xl 2xl:text-5xl font-tommy-light font-semibold leading-none mt-6 2xl:mt-10"
+          className="flex flex-col items-center gap-4 text-3xl 2xl:text-4xl font-tommy-light font-semibold leading-none mt-6 2xl:mt-10"
         >
           <h2 className="text-[#e4e4e4]">
             Enhancing the visual representation of your businesses
@@ -112,9 +112,9 @@ function Hero({ startAnim = false }) {
           variants={smallUp}
           className="flex items-center gap-12 mt-14 2xl:mt-20"
         >
-          <div className="w-56 h-14 border-2 rounded-xl border-white flex items-center justify-center group cursor-pointer">
+          <div className="w-44 2xl:w-56 h-12 2xl:h-14  border-2 rounded-xl border-white flex items-center justify-center group cursor-pointer">
             <div className="flex items-center gap-3 ">
-              <h3 className="text-[25px]">Gallery</h3>
+              <h3 className=" text-lg 2xl:text-[25px]">Gallery</h3>
               <Image
                 src="/arrow-right.svg"
                 alt="arrow"
@@ -125,9 +125,11 @@ function Hero({ startAnim = false }) {
             </div>
           </div>
           <a href="#contact" onClick={handleNavClick}>
-            <div className="w-56 h-14 border-2 rounded-xl border-white bg-gradient-to-l from-[#999999] to-white flex items-center justify-center group cursor-pointer">
+            <div className="w-44 2xl:w-56 h-12 2xl:h-14 border-2 rounded-xl border-white bg-gradient-to-l from-[#999999] to-white flex items-center justify-center group cursor-pointer">
               <div className="flex items-center gap-3 ">
-                <h3 className="text-[25px] text-black">Get Started</h3>
+                <h3 className="text-lg 2xl:text-[25px] text-black">
+                  Get Started
+                </h3>
                 <Image
                   src="/arrow-right-black.svg"
                   alt="arrow"

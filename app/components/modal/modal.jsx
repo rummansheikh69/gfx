@@ -6,7 +6,11 @@ import { useEffect, useState, useRef } from "react";
 import { LuMail } from "react-icons/lu";
 import Skeleton from "../skeleton/skeleton";
 
-export default function FullscreenModal({ id }) {
+export default function FullscreenModal({
+  id,
+  project,
+  isGettinghProjectForView,
+}) {
   const [isOpen, setIsOpen] = useState(false);
   const modalRef = useRef(null);
 
@@ -28,7 +32,7 @@ export default function FullscreenModal({ id }) {
     }
   }, [isOpen]);
 
-  const isLoadng = false; // Placeholder for loading state
+  const isLoadng = isGettinghProjectForView ? true : false; // Placeholder for loading state
 
   return (
     <AnimatePresence>
@@ -105,15 +109,16 @@ export default function FullscreenModal({ id }) {
             </button>
 
             {/* Hire Button */}
-            <button
-              onClick={() => setIsOpen(false)}
+            <a
+              href="https://t.me/disproportions"
+              target="_blank"
               className="fixed top-20 right-6 flex flex-col items-center z-50 cursor-pointer"
             >
               <div className="h-10 w-10 flex items-center justify-center rounded-full bg-[#202020] hover:bg-[#1d1d1d]">
                 <LuMail />
               </div>
               <h3 className="text-sm">Hire</h3>
-            </button>
+            </a>
 
             {/* Bottom Badge */}
             <div className="fixed bottom-0 inset-x-0 w-full pb-6 pt-3 px-6 z-50 bg-gradient-to-t from-[#030303] to-transparent">
@@ -123,9 +128,9 @@ export default function FullscreenModal({ id }) {
                 </div>
 
                 <div>
-                  <h3 className="text-[12px] 2xl:text-sm">Logo Design w/</h3>
+                  <h3 className="text-[12px] 2xl:text-sm">{project?.title}</h3>
                   <h3 className="text-[10px] 2xl:text-xs font-tommy-light font-light text-zinc-300 leading-none">
-                    Available for Freelance Work
+                    {project?.sub_title}
                   </h3>
                 </div>
               </div>
@@ -137,16 +142,18 @@ export default function FullscreenModal({ id }) {
                 <Skeleton className="w-full  aspect-[16/9]  rounded-xl" />
               </div>
             ) : (
-              <div className="w-full px-20 mb-5">
-                <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden">
-                  <Image
-                    src="https://cdn.pixabay.com/photo/2016/11/21/06/53/beautiful-natural-image-1844362_640.jpg"
-                    alt="Portfolio Image"
-                    fill
-                    className="object-cover cursor-zoom-in"
-                  />
+              project?.images?.map((imgSrc, index) => (
+                <div key={index} className="w-full px-20 mb-5">
+                  <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden">
+                    <Image
+                      src={imgSrc}
+                      alt={`Project Image ${index + 1}`}
+                      fill
+                      className="object-cover "
+                    />
+                  </div>
                 </div>
-              </div>
+              ))
             )}
           </motion.div>
         </motion.div>

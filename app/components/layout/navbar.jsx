@@ -100,11 +100,11 @@ function Navbar() {
             onClick={(e) => handleNavigation(e, "/")}
             className=" w-32 flex items-center justify-center  bg-transparent backdrop-blur-[4px]  py-2.5 rounded-md"
           >
-            <h1 className=" text-2xl font-tommy-regular tracking-wide leading-none  bg-gradient-to-r from-white via-white to-[#aeaeae] bg-clip-text text-transparent">
+            <h1 className=" text-xl 2xl:text-2xl  font-tommy-regular tracking-wide leading-none  bg-gradient-to-r from-white via-white to-[#aeaeae] bg-clip-text text-transparent">
               UXGFX®
             </h1>
           </Link>
-          <div className=" flex items-center bg-transparent backdrop-blur-[4px] px-5 py-3 rounded-md gap-10 lg:gap-14 text-lg 2xl:text-xl text-[#a8a8a8]">
+          <div className=" flex items-center bg-transparent backdrop-blur-[4px] px-5 py-3 rounded-md gap-10 lg:gap-14 text-[16px] 2xl:text-xl text-[#a8a8a8]">
             <a href="#" className="hover:text-[#e9e9e9] duration-400">
               About
             </a>

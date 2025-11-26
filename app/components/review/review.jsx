@@ -50,13 +50,13 @@ function Review() {
             </div>
           </div>
 
-          <div className=" overflow-hidden relative h-96 w-full lg:w-[500px] border-2 border-[#383838] rounded-2xl bg-[#121212] ">
+          <div className=" overflow-hidden relative h-80 2xl:h-96 w-full lg:w-[450px] border-2 border-[#383838] rounded-2xl bg-[#121212] ">
             <div className=" absolute -right-2/5 rotate-6 -bottom-16">
               <Image
                 src="/quote.png"
                 alt="review"
-                width={600}
-                height={600}
+                width={500}
+                height={500}
                 className=" opacity-10"
               />
             </div>
@@ -72,27 +72,27 @@ function Review() {
                       <Image
                         src="/agent.png"
                         alt="avatar"
-                        width={80}
-                        height={80}
+                        width={60}
+                        height={60}
                       />
                     </div>
 
-                    <h2 className=" text-2xl font-tommy-regular tracking-wider">
+                    <h2 className=" text-xl 2xl:text-2xl font-tommy-regular tracking-wider">
                       Anonymous
                     </h2>
                   </div>
                   <div className=" flex items-center gap-1">
-                    <FaStar className=" text-white size-6" />
-                    <FaStar className=" text-white size-6" />
-                    <FaStar className=" text-white size-6" />
-                    <FaStar className=" text-white size-6" />
-                    <FaStar className=" text-white size-6" />
+                    <FaStar className=" text-white size-5 2xl:size-6" />
+                    <FaStar className=" text-white size-5 2xl:size-6" />
+                    <FaStar className=" text-white size-5 2xl:size-6" />
+                    <FaStar className=" text-white size-5 2xl:size-6" />
+                    <FaStar className=" text-white size-5 2xl:size-6" />
                   </div>
                 </div>
 
                 {/* review desc */}
                 <div className=" mt-3 pl-3">
-                  <h3 className=" text-[#b5b5b5] text-2xl leading-11 tracking-wide">
+                  <h3 className=" text-[#b5b5b5] text-lg 2xl:text-2xl leading-8 2xl:leading-11 tracking-wide">
                     He made a custom logo/profile picture design for me, went
                     above and beyond with everything and actually gave me a
                     clean PSD file that isn't a mess!
