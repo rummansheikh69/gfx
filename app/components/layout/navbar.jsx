@@ -144,7 +144,7 @@ function Navbar() {
               onClick={() => {
                 setIsActive(!isActive);
               }}
-              className=" fixed m-[20px] z-[999] w-[40px] h-[40px] flex items-center justify-center right-0 top-0 bg-[#202020] rounded-full cursor-pointer md:hidden"
+              className=" fixed mt-[28px] m-[20px] z-[999] w-[40px] h-[40px] flex items-center justify-center right-0 top-0 bg-[#202020] rounded-full cursor-pointer md:hidden"
             >
               <div
                 className={`${styles.burger} ${
