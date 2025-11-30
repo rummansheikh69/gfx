@@ -34,7 +34,7 @@ function Quote() {
               delay: 0.1,
               ease: [0.25, 0.1, 0.25, 1], // smoother ease
             }}
-            className="absolute -left-[420px] 2xl:-left-72 top-56 2xl:top-64 h-[2500px] w-[2500px] rounded-full bg-[#414141] blur-[150px]"
+            className="absolute -left-[420px] 2xl:-left-72 top-56 2xl:top-64 h-[2500px] w-[2500px] rounded-full bg-[#414141] blur-[150px] overflow-hidden before:content-[''] before:absolute before:inset-0 before:bg-[repeating-linear-gradient(45deg,rgba(255,255,255,0.04)_0px,rgba(255,255,255,0.04)_1px,rgba(0,0,0,0)_1px,rgba(0,0,0,0)_2px)] before:opacity-20"
           ></motion.div>
           <div className="  z-10 py-10 px-7 2xl:px-10 ">
             <div className=" grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-0">
