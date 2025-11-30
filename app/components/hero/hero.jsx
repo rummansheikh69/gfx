@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useRef, useEffect, useState } from "react";
 import { delay, motion } from "framer-motion";
+import Link from "next/link";
 
 const container = {
   hidden: {},
@@ -61,7 +62,7 @@ function Hero({ startAnim = false }) {
   }, []);
 
   return (
-    <div className="w-full h-screen pt-16">
+    <div className="w-full h-screen  md:pt-16">
       <motion.div
         className="w-full h-full flex flex-col items-center justify-center"
         variants={container}
@@ -82,7 +83,7 @@ function Hero({ startAnim = false }) {
 
         <motion.div
           variants={bigUp}
-          className="flex items-center gap-4 text-[150px] 2xl:text-[200px] font-tommy-bold leading-none mt-5"
+          className="flex items-center gap-4 text-8xl md:text-[150px] 2xl:text-[200px] font-tommy-bold leading-none mt-5"
         >
           <h1 className="text-[#ababab]">UX</h1>
           <h1>GFX</h1>
@@ -90,7 +91,7 @@ function Hero({ startAnim = false }) {
 
         <motion.div
           variants={smallUp}
-          className="flex flex-col items-center gap-4 text-3xl 2xl:text-4xl font-tommy-light font-semibold leading-none mt-6 2xl:mt-10"
+          className="flex flex-col items-center gap-4 text-center text-base md:text-3xl 2xl:text-4xl font-tommy-light font-semibold leading-none mt-6 2xl:mt-10"
         >
           <h2 className="text-[#e4e4e4]">
             Enhancing the visual representation of your businesses
@@ -110,24 +111,28 @@ function Hero({ startAnim = false }) {
 
         <motion.div
           variants={smallUp}
-          className="flex items-center gap-12 mt-14 2xl:mt-20"
+          className="flex items-center gap-6 md:gap-12 mt-14 2xl:mt-20"
         >
-          <div className="w-44 2xl:w-56 h-12 2xl:h-14  border-2 rounded-xl border-white flex items-center justify-center group cursor-pointer">
-            <div className="flex items-center gap-3 ">
-              <h3 className=" text-lg 2xl:text-[25px]">Gallery</h3>
-              <Image
-                src="/arrow-right.svg"
-                alt="arrow"
-                width={22}
-                height={22}
-                className="group-hover:translate-x-2 duration-300"
-              />
-            </div>
+          <div className="w-36 md:w-44 2xl:w-56 h-11 md:h-12 2xl:h-14  border-2 rounded-xl border-white flex items-center justify-center group cursor-pointer">
+            <Link href="/gallery">
+              <div className="flex items-center gap-3 ">
+                <h3 className=" text-base md:text-lg 2xl:text-[25px]">
+                  Gallery
+                </h3>
+                <Image
+                  src="/arrow-right.svg"
+                  alt="arrow"
+                  width={22}
+                  height={22}
+                  className="group-hover:translate-x-2 duration-300"
+                />
+              </div>
+            </Link>
           </div>
           <a href="#contact" onClick={handleNavClick}>
-            <div className="w-44 2xl:w-56 h-12 2xl:h-14 border-2 rounded-xl border-white bg-gradient-to-l from-[#999999] to-white flex items-center justify-center group cursor-pointer">
+            <div className="w-36 md:w-44 2xl:w-56 h-11 md:h-12 2xl:h-14 border-2 rounded-xl border-white bg-gradient-to-l from-[#999999] to-white flex items-center justify-center group cursor-pointer">
               <div className="flex items-center gap-3 ">
-                <h3 className="text-lg 2xl:text-[25px] text-black">
+                <h3 className="text-base md:text-lg 2xl:text-[25px] text-black">
                   Get Started
                 </h3>
                 <Image

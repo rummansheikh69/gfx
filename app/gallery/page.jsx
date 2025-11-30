@@ -33,7 +33,7 @@ function page() {
     <div className="font-tommy-light font-semibold text-white bg-[#121212] min-h-screen ">
       <Navbar />
       <div className="">
-        <div className="relative bg-[linear-gradient(to_right,#161616_2px,transparent_2px),linear-gradient(to_bottom,#161616_2px,transparent_2px)] bg-[size:50px_50px] w-full flex items-center justify-center h-[60vh] 2xl:h-[50vh] ">
+        <div className="relative bg-[linear-gradient(to_right,#161616_2px,transparent_2px),linear-gradient(to_bottom,#161616_2px,transparent_2px)] bg-[size:50px_50px] w-full flex items-center justify-center h-[40vh] sm:h-[60vh] 2xl:h-[50vh] ">
           {/* bottom fade overlay to smoothly blend the grid into the page background */}
           <div
             aria-hidden="true"
@@ -41,10 +41,10 @@ function page() {
           />
           <Title
             className={
-              "text-[140px] font-tommy-bold mt-10 2xl:mt-5 select-none z-10"
+              " text-6xl md:text-[130px] font-tommy-light mt-10 2xl:mt-5 select-none z-10"
             }
           >
-            UX<span className="text-[#ababab]">GFX</span>
+            Portfolio
           </Title>
         </div>
         <FullscreenModal
@@ -53,9 +53,10 @@ function page() {
           id="modal"
         />
         <div className=" px-6 md:px-12 lg:px-16 xl:px-24 2xl:px-28 w-full">
-          <div className=" w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-5">
+          <div className=" w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-4 sm:gap-5">
             {isGettingGalleryItems ? (
               <>
+                <div className=" animate-pulse h-64 bg-[#161616] w-full rounded-lg overflow-hidden border border-[#1a1a1a]"></div>
                 <div className=" animate-pulse h-64 bg-[#161616] w-full rounded-lg overflow-hidden border border-[#1a1a1a]"></div>
                 <div className=" animate-pulse h-64 bg-[#161616] w-full rounded-lg overflow-hidden border border-[#1a1a1a]"></div>
                 <div className=" animate-pulse h-64 bg-[#161616] w-full rounded-lg overflow-hidden border border-[#1a1a1a]"></div>
@@ -73,8 +74,8 @@ function page() {
                   </h1>
                   <div className=" absolute inset-0 px-5 pt-5 ">
                     <div className=" w-full h-full relative">
-                      <h4 className=" text-lg">UX</h4>
-                      <h2 className=" text-2xl font-tommy-regular">
+                      <h4 className=" text-sm sm:text-lg">UX</h4>
+                      <h2 className=" text-xl sm:text-2xl font-tommy-regular leading-none my-1">
                         {project?.title}
                       </h2>
                       <h5 className=" text-sm text-zinc-400">
@@ -90,7 +91,7 @@ function page() {
                       <div className=" w-full h-full flex items-center justify-center px-5 ">
                         <div className=" w-full flex items-end justify-between gap-2">
                           <div className="">
-                            <h3 className=" text-[15px] 2xl:text-lg">
+                            <h3 className=" text-[13px] truncate w-20 sm:w-full sm:text-[15px] 2xl:text-lg">
                               {project?.sub_title}
                             </h3>
                             <h4 className=" text-[11px] 2xl:text-sm leading-none font-light">

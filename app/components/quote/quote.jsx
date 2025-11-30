@@ -37,13 +37,13 @@ function Quote() {
             className="absolute -left-[420px] 2xl:-left-72 top-56 2xl:top-64 h-[2500px] w-[2500px] rounded-full bg-[#414141] blur-[150px]"
           ></motion.div>
           <div className="  z-10 py-10 px-7 2xl:px-10 ">
-            <div className=" grid grid-cols-1 lg:grid-cols-2">
+            <div className=" grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-0">
               <div className="">
-                <h1 className=" text-5xl 2xl:text-6xl tracking-wide leading-none  bg-gradient-to-r from-white via-[#c3c3c3]  to-[#c3c3c3] bg-clip-text text-transparent">
+                <h1 className=" whitespace-nowrap text-4xl 2xl:text-6xl tracking-wide leading-none  bg-gradient-to-r from-white via-[#c3c3c3]  to-[#c3c3c3] bg-clip-text text-transparent">
                   Retainer Service
                 </h1>
 
-                <h3 className="text-[#a4a4a4] my-5 text-xl 2xl:text-2xl">
+                <h3 className="text-[#a4a4a4] my-5 text-base sm:text-lg md:text-xl 2xl:text-2xl">
                   Unlimited requests, quick turnarounds, <br /> all for a fixed
                   weekly price.
                 </h3>
@@ -83,26 +83,26 @@ function Quote() {
               <div className=" relative">
                 <div className=" w-full h-full flex items-center justify-center">
                   <div className=" flex items-end">
-                    <h2 className="text-[110px] 2xl:text-[150px] font-tommy-regular tracking-wide leading-none  bg-gradient-to-r from-white via-[#c3c3c3]  to-[#c3c3c3] bg-clip-text text-transparent">
+                    <h2 className=" text-7xl md:text-[110px] 2xl:text-[150px] font-tommy-regular tracking-wide leading-none  bg-gradient-to-r from-white via-[#c3c3c3]  to-[#c3c3c3] bg-clip-text text-transparent">
                       $200
                     </h2>
-                    <div className=" flex flex-col items-center mb-4">
+                    <div className=" flex flex-col items-center mb-1 md:mb-4">
                       <h4 className="text-xl 2xl:text-3xl text-[#a4a4a4]">
                         /week
                       </h4>
-                      <h4 className="text-lg 2xl:text-xl text-[#a4a4a4]">
+                      <h4
+                        ref={ref}
+                        className="text-lg 2xl:text-xl text-[#a4a4a4]"
+                      >
                         (negotiable)
                       </h4>
                     </div>
                   </div>
                 </div>
 
-                <div className=" absolute bottom-0 inset-x-0 mx-auto w-44 2xl:w-56 h-12 2xl:h-14 border-2 rounded-xl border-white bg-gradient-to-l from-[#999999] to-white flex items-center justify-center group cursor-pointer">
+                <div className=" hidden absolute bottom-0 inset-x-0 mx-auto w-44 2xl:w-56 h-12 2xl:h-14 border-2 rounded-xl border-white bg-gradient-to-l from-[#999999] to-white md:flex items-center justify-center group cursor-pointer">
                   <div className="flex items-center gap-3 ">
-                    <h3
-                      ref={ref}
-                      className="text-[20px] 2xl:text-[25px] text-black"
-                    >
+                    <h3 className="text-[20px] 2xl:text-[25px] text-black">
                       Contact
                     </h3>
                     <Image

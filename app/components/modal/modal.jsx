@@ -101,7 +101,7 @@ export default function FullscreenModal({
             {/* X CLOSE BUTTON */}
             <button
               onClick={() => setIsOpen(false)}
-              className="fixed top-6 right-6 h-10 w-10 flex items-center justify-center 
+              className="fixed top-6 right-3 sm:right-6 h-10 w-10 flex items-center justify-center 
               cursor-pointer rounded-full bg-[#202020] hover:bg-[#1d1d1d] 
               text-gray-200 z-50 shadow-lg"
             >
@@ -112,7 +112,7 @@ export default function FullscreenModal({
             <a
               href="https://t.me/disproportions"
               target="_blank"
-              className="fixed top-20 right-6 flex flex-col items-center z-50 cursor-pointer"
+              className="fixed top-20 right-3 sm:right-6 flex flex-col items-center z-50 cursor-pointer"
             >
               <div className="h-10 w-10 flex items-center justify-center rounded-full bg-[#202020] hover:bg-[#1d1d1d]">
                 <LuMail />
@@ -138,12 +138,12 @@ export default function FullscreenModal({
 
             {/* MAIN IMAGE */}
             {isLoadng ? (
-              <div className="w-full px-20 mb-5">
+              <div className="w-full px-5 md:px-20 mb-5">
                 <Skeleton className="w-full  aspect-[16/9]  rounded-xl" />
               </div>
             ) : (
               project?.images?.map((imgSrc, index) => (
-                <div key={index} className="w-full px-20 mb-5">
+                <div key={index} className="w-full px-10 md:px-20 mb-5">
                   <div className="relative w-full aspect-[16/9] rounded-xl overflow-hidden">
                     <Image
                       src={imgSrc}

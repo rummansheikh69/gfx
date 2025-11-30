@@ -5,10 +5,10 @@ function Footer() {
     <div>
       <div
         id="contact"
-        className=" lg:h-[70vh]  px-5 md:px-10 lg:px-14 xl:px-20 2xl:px-32 w-full"
+        className=" h-[50vh] md:h-[70vh]  px-5 md:px-10 lg:px-14 xl:px-20 2xl:px-32 w-full"
       >
         <div className=" w-full h-full border-b-2 border-[#797979] flex items-center">
-          <div className=" flex items-center justify-between w-full px-8 md:px-14 lg:px-20 xl:px-28 2xl:px-52">
+          <div className=" flex items-center gap-10 justify-between w-full px-5 md:px-10 lg:px-14 xl:px-20 2xl:px-32">
             <a
               className=" group"
               href="https://t.me/disproportions"
@@ -21,7 +21,7 @@ function Footer() {
                 disproportions
               </h2>
             </a>
-            <a className=" group" href="https://uxgfx.com">
+            <a className=" group hidden md:block" href="https://uxgfx.com">
               <h2 className="group-hover:underline text-[#838383] text-lg 2xl:text-2xl">
                 Website
               </h2>
@@ -30,7 +30,7 @@ function Footer() {
               </h2>
             </a>
             <a
-              className=" group"
+              className=" group "
               href="https://discord.gg/uxgfx"
               target="_blank"
             >
@@ -51,7 +51,7 @@ function Footer() {
           <span className="text-[#aeaeae]">2025</span>
         </h3>
 
-        <h3 className="font-tommy-light font-semibold 2xl:text-2xl">
+        <h3 className="font-tommy-light font-semibold text-sm 2xl:text-xl">
           Made with ❤️ by ux
         </h3>
       </div>

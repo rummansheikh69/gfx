@@ -1,10 +1,15 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import { useState } from "react";
+import styles from "./style.module.scss";
 import { useTransitionRouter } from "next-view-transitions";
 import { usePathname } from "next/navigation";
 import gsap from "gsap";
+import { AnimatePresence, motion } from "framer-motion";
+import { menuSlide } from "./anim";
+import Curve from "./curve";
+import { BsArrowRight } from "react-icons/bs";
 
 function Navbar() {
   function handleNavClick(e) {
@@ -91,6 +96,8 @@ function Navbar() {
     });
   };
 
+  const [isActive, setIsActive] = useState(false);
+
   return (
     <div className=" w-full fixed top-0 inset-x-0 z-40 site-navbar">
       <div className=" px-5 md:px-10 lg:px-14 xl:px-20 2xl:px-24 h-24 flex items-center">
@@ -100,11 +107,11 @@ function Navbar() {
             onClick={(e) => handleNavigation(e, "/")}
             className=" w-32 flex items-center justify-center  bg-transparent backdrop-blur-[4px]  py-2.5 rounded-md"
           >
-            <h1 className=" text-xl 2xl:text-2xl  font-tommy-regular tracking-wide leading-none  bg-gradient-to-r from-white via-white to-[#aeaeae] bg-clip-text text-transparent">
+            <h1 className=" text-2xl 2xl:text-2xl  font-tommy-regular tracking-wide leading-none  bg-gradient-to-r from-white via-white to-[#aeaeae] bg-clip-text text-transparent">
               UXGFX®
             </h1>
           </Link>
-          <div className=" flex items-center bg-transparent backdrop-blur-[4px] px-5 py-3 rounded-md gap-10 lg:gap-14 text-[16px] 2xl:text-xl text-[#a8a8a8]">
+          <div className=" hidden md:flex items-center bg-transparent backdrop-blur-[4px] px-5 py-3 rounded-md gap-10 lg:gap-14 text-[16px] 2xl:text-xl text-[#a8a8a8]">
             <a href="#" className="hover:text-[#e9e9e9] duration-400">
               About
             </a>
@@ -130,6 +137,96 @@ function Navbar() {
               Contact
             </a>
           </div>
+
+          {/* mobile menu */}
+          <>
+            <div
+              onClick={() => {
+                setIsActive(!isActive);
+              }}
+              className=" fixed m-[20px] z-[999] w-[40px] h-[40px] flex items-center justify-center right-0 top-0 bg-[#202020] rounded-full cursor-pointer md:hidden"
+            >
+              <div
+                className={`${styles.burger} ${
+                  isActive ? styles.burgerActive : ""
+                }`}
+              ></div>
+            </div>
+            <AnimatePresence mode="wait">
+              {isActive && (
+                <motion.div
+                  variants={menuSlide}
+                  initial="initial"
+                  animate="enter"
+                  exit="exit"
+                  className="  w-52 bg-[#252525] h-screen fixed right-0 top-0"
+                >
+                  <div className=" w-full h-full px-5">
+                    <div className=" pb-2 border-b border-zinc-600 mt-20">
+                      <span className=" font-tommy-light font-light">
+                        Navigation
+                      </span>
+                    </div>
+
+                    <div className=" mt-10 font-tommy-light">
+                      <ul className=" flex flex-col gap-6 text-lg">
+                        <li>
+                          <a
+                            href="#"
+                            onClick={() => {
+                              handleNavClick;
+                              setTimeout(() => setIsActive(false), 500);
+                            }}
+                            className=" hover:text-[#e9e9e9] duration-400"
+                          >
+                            About
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#services"
+                            onClick={() => {
+                              handleNavClick;
+                              setTimeout(() => setIsActive(false), 500);
+                            }}
+                            className=" hover:text-[#e9e9e9] duration-400"
+                          >
+                            Pricing
+                          </a>
+                        </li>
+                        <li>
+                          <Link
+                            href="/gallery"
+                            onClick={(e) => handleNavigation(e, "/gallery")}
+                            className=" hover:text-[#e9e9e9] duration-400 flex items-center gap-2"
+                          >
+                            <span>Gallery</span>
+                            <div>
+                              <BsArrowRight className=" mt-1" />
+                            </div>
+                          </Link>
+                        </li>
+                        <li>
+                          <a
+                            href="#contact"
+                            onClick={() => {
+                              handleNavClick;
+                              setTimeout(() => setIsActive(false), 500);
+                            }}
+                            className=" hover:text-[#e9e9e9] duration-400"
+                          >
+                            Contact
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <Curve />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </>
+          {/* mobile menu end */}
         </div>
       </div>
     </div>

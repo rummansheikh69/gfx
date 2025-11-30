@@ -10,17 +10,17 @@ function Review() {
   return (
     <div className=" pb-12 pt-24 ">
       <div className=" w-full h-full flex justify-center items-center">
-        <div className=" flex flex-col lg:flex-row gap-52 items-center">
-          <div className=" flex flex-col gap-5">
+        <div className=" flex flex-col lg:flex-row gap-32 md:gap-52 items-center">
+          <div className=" flex flex-col -ml-20 md:-ml-0 gap-5">
             <div className=" relative">
               <div className=" py-3 border-b">
                 <h2 className=" tracking-wider text-lg 2xl:text-2xl leading-none bg-gradient-to-r from-white via-white to-[#c3c3c3] bg-clip-text text-transparent">
                   Unmatched Fulfilment
                 </h2>
               </div>
-              <div className=" absolute md:-right-[11px] md:-bottom-[5px] lg:-right-[11px] lg:-bottom-[4px] h-8 rotate-45 w-[1px] bg-white" />
-              <div className=" absolute md:-right-[61.5px] md:top-[25.5px] lg:-right-[78px] lg:top-[19.5px] 2xl:top-[25.5px]  h-[1px]  w-14 bg-white" />
-              <div className=" absolute md:-right-[60px] md:top-[25.5px] lg:-right-[60px] lg:-top-3 ">
+              <div className=" absolute -right-[11px] -bottom-[5px] md:-right-[11px] md:-bottom-[5px] lg:-right-[11px] lg:-bottom-[4px] h-8 rotate-45 w-[1px] bg-white" />
+              <div className=" absolute -right-[76.5px] top-[20.5px] md:-right-[61.5px] md:top-[25.5px] lg:-right-[78px] lg:top-[19.5px] 2xl:top-[25.5px]  h-[1px]  w-14 bg-white" />
+              <div className=" absolute -right-[60px] -top-[5.5px] md:-right-[60px] md:top-[25.5px] lg:-right-[60px] lg:-top-3 ">
                 <MdAlarm className=" size-5 2xl:size-6" />
               </div>
             </div>
@@ -30,9 +30,9 @@ function Review() {
                   5+ Years Experience
                 </h2>
               </div>
-              <div className=" absolute md:-right-[11px] md:-bottom-[5px] lg:-right-[11px] lg:-bottom-[4px] h-8 rotate-45 w-[1px] bg-white" />
-              <div className=" absolute md:-right-[61.5px] md:top-[25.5px] lg:-right-[78px] lg:top-[19.5px] 2xl:top-[25.5px] h-[1px]  w-14 bg-white" />
-              <div className=" absolute md:-right-[60px] md:top-[25.5px] lg:-right-[60px] lg:-top-3 ">
+              <div className=" absolute -right-[11px] -bottom-[5px] md:-right-[11px] md:-bottom-[5px] lg:-right-[11px] lg:-bottom-[4px] h-8 rotate-45 w-[1px] bg-white" />
+              <div className=" absolute -right-[76.5px] top-[20.5px] md:-right-[61.5px] md:top-[25.5px] lg:-right-[78px] lg:top-[19.5px] 2xl:top-[25.5px] h-[1px]  w-14 bg-white" />
+              <div className=" absolute -right-[60px] -top-[5.5px] md:-right-[60px] md:top-[25.5px] lg:-right-[60px] lg:-top-3 ">
                 <AiOutlineTrophy className=" size-5 2xl:size-6" />
               </div>
             </div>
@@ -42,9 +42,9 @@ function Review() {
                   Over 4000+ Vouches
                 </h2>
               </div>
-              <div className=" absolute md:-right-[11px] md:-bottom-[5px] lg:-right-[11px] lg:-bottom-[4px] h-8 rotate-45 w-[1px] bg-white" />
-              <div className=" absolute md:-right-[61.5px] md:top-[25.5px] lg:-right-[78px] lg:top-[19.5px] 2xl:top-[25.5px] h-[1px]  w-14 bg-white" />
-              <div className=" absolute md:-right-[60px] md:top-[25.5px] lg:-right-[60px] lg:-top-3 ">
+              <div className=" absolute -right-[11px] -bottom-[5px] md:-right-[11px] md:-bottom-[5px] lg:-right-[11px] lg:-bottom-[4px] h-8 rotate-45 w-[1px] bg-white" />
+              <div className=" absolute -right-[76.5px] top-[20.5px] md:-right-[61.5px] md:top-[25.5px] lg:-right-[78px] lg:top-[19.5px] 2xl:top-[25.5px] h-[1px]  w-14 bg-white" />
+              <div className=" absolute -right-[60px] -top-[5.5px] md:-right-[60px] md:top-[25.5px] lg:-right-[60px] lg:-top-3 ">
                 <GoVerified className=" size-5 2xl:size-6" />
               </div>
             </div>
@@ -66,18 +66,18 @@ function Review() {
 
             <div className=" absolute z-10 inset-0">
               <div className=" relative w-full h-full pl-5 pr-10">
-                <div className=" flex items-center justify-between gap-8 mt-5">
+                <div className=" flex items-center justify-between gap-5 md:gap-8 mt-5">
                   <div className=" flex items-center gap-2 ">
-                    <div className="">
+                    <div className="relative w-12 h-12 sm:w-16 sm:h-16 md:w-16 md:h-16 rounded-full overflow-hidden">
                       <Image
                         src="/agent.png"
                         alt="avatar"
-                        width={60}
-                        height={60}
+                        fill
+                        className="object-cover"
                       />
                     </div>
 
-                    <h2 className=" text-xl 2xl:text-2xl font-tommy-regular tracking-wider">
+                    <h2 className=" text-lg md:text-xl 2xl:text-2xl font-tommy-regular tracking-wider">
                       Anonymous
                     </h2>
                   </div>

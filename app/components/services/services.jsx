@@ -5,10 +5,10 @@ function Services() {
   return (
     <div id="services" className=" w-full pt-24 ">
       <div className=" flex items-center justify-center w-full">
-        <div className=" flex items-center justify-center w-full gap-20">
+        <div className=" flex items-center justify-center w-full gap-5 md:gap-20">
           <div className=" h-[2px] w-1/5  bg-gradient-to-l from-[#acacac] via-[#6e6e6e] to-[#121212]"></div>
           <div className="">
-            <h1 className=" text-5xl 2xl:text-7xl font-tommy-regular tracking-wide leading-none -mt-3  bg-gradient-to-r from-white  to-[#c3c3c3] bg-clip-text text-transparent">
+            <h1 className=" whitespace-nowrap text-3xl md:text-5xl 2xl:text-7xl font-tommy-regular tracking-wide leading-none -mt-3  bg-gradient-to-r from-white  to-[#c3c3c3] bg-clip-text text-transparent">
               Our Services
             </h1>
           </div>
